@@ -8,5 +8,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 1440px;
+  height: 720px;
+  border: 1px solid red;
   background-color: var(--off-white);
 }
