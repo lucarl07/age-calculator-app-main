@@ -1,0 +1,8 @@
+.container {
+  margin: 0 auto;
+  padding: 2.5rem;
+  width: 720px;
+  height: 580px;
+  border-radius: 1.25rem 1.25rem 12.5rem 1.25rem;
+  background-color: var(--white);
+}
