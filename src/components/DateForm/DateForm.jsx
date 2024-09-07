@@ -5,7 +5,7 @@ import styles from "./DateForm.module.css"
 import FormField from "./FormField";
 
 // Modules:
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 const DateForm = () => {
   const [ bday, setBday ] = useState('') // Birthday
@@ -17,19 +17,19 @@ const DateForm = () => {
       <FormField.Root>
         <FormField.Label type="day" />
         <FormField.Input type="day" getter={bday} setter={setBday} />
-        <FormField.Error error="Please delete me afterwards." />
+        { bday.length === 0 && <FormField.Error error="Please delete me afterwards." /> }
       </FormField.Root>
       
       <FormField.Root>
         <FormField.Label type="month" />
         <FormField.Input type="month" getter={bmonth} setter={setBmonth} />
-        <FormField.Error error="Please delete me afterwards." />
+        { bmonth.length === 0 && <FormField.Error error="Please delete me afterwards." /> }
       </FormField.Root>
 
       <FormField.Root>
         <FormField.Label type="year" />
         <FormField.Input type="year" getter={byear} setter={setByear} />
-        <FormField.Error error="Please delete me afterwards." />
+        { byear.length === 0 && <FormField.Error error="Please delete me afterwards." /> }
       </FormField.Root>
     </form>
   );
