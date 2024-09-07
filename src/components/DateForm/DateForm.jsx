@@ -13,7 +13,7 @@ const DateForm = () => {
   const [ byear, setByear ] = useState(null) // Birth year
 
   return (
-    <>
+    <form className="date-form">
       <FormField.Root>
         <FormField.Label type="day" />
         <FormField.Input getter={bday} setter={setBday} />
@@ -31,7 +31,7 @@ const DateForm = () => {
         <FormField.Input getter={byear} setter={setByear} />
         <FormField.Error error="Please delete me afterwards." />
       </FormField.Root>
-    </>
+    </form>
   );
 }
 
