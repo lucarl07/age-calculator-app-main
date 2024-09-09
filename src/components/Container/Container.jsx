@@ -1,4 +1,5 @@
 import DateForm from "../DateForm/DateForm";
+import Separator from "../Separator/Separator";
 import styles from "./Container.module.css"
 
 const Container = () => {
@@ -8,6 +9,7 @@ const Container = () => {
       <DateForm />
 
       {/* Middle - Section Separator */}
+      <Separator />
       
       {/* Bottom - Resulting Age */}
     </section>
