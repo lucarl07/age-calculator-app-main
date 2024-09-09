@@ -1,18 +1,13 @@
 // Components:
-import { calculateAge } from "../../helpers/DateForm/getAge";
 import FormField from "./FormField";
 
 // Modules:
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const DateForm = () => {
   const [ bday, setBday ] = useState('') // Birthday
   const [ bmonth, setBmonth ] = useState('') // Birth month
   const [ byear, setByear ] = useState('') // Birth year
-
-  useEffect(() => {
-    calculateAge(byear, bmonth, bday)
-  }, [bday, bmonth, byear])
 
   return (
     <form className="date-form">
