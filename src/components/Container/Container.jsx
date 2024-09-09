@@ -1,17 +1,17 @@
 import DateForm from "../DateForm/DateForm";
+import Results from "../Results/Results";
 import Separator from "../Separator/Separator";
 import styles from "./Container.module.css"
 
 const Container = () => {
   return (
     <section className={styles.container}>
-      {/* Top - Birth Date Formulary */}
-      <DateForm />
-
-      {/* Middle - Section Separator */}
-      <Separator />
-      
-      {/* Bottom - Resulting Age */}
+      {/* Birth Date Formulary */}
+      <DateForm /> 
+      {/* Section Separator */}
+      <Separator /> 
+      {/* Resulting Age */}
+      <Results /> 
     </section>
   );
 }
