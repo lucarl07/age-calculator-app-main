@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import helpers from "../../../helpers/DateForm";
+import helpers from "../../../helpers";
 
 const FormFieldInput = ({ type, getter, setter }) => {
   const setPlaceholder = helpers.setPlaceholder(type)
