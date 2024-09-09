@@ -2,12 +2,17 @@
 import FormField from "./FormField";
 
 // Modules:
+import calculateAge from "../../helpers/calculateAge";
 import { useState } from "react";
 
 const DateForm = () => {
   const [ bday, setBday ] = useState('') // Birthday
   const [ bmonth, setBmonth ] = useState('') // Birth month
   const [ byear, setByear ] = useState('') // Birth year
+
+  if (bday != '' && bmonth != '' && byear != '') {
+    calculateAge(byear, bmonth, bday)
+  }
 
   return (
     <form className="date-form">
