@@ -18,6 +18,16 @@ const calculateAge = (year, month, day) => {
     months: now.subtract(month, "month").month(),
     days: now.subtract(day, "day").date()
   }
+
+  if (age.days === 31) {
+    age.days = 0
+    age.months++
+  }
+  if (age.months == 12) {
+    age.months = 0
+    age.years++
+  }
+
   return dayjs.duration(age);
 }
 
