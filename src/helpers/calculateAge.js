@@ -1,9 +1,9 @@
 import dayjs from "dayjs";
 import objectSupport from "dayjs/plugin/objectSupport";
-import customParseFormat from "dayjs/plugin/customParseFormat";
+import duration from 'dayjs/plugin/duration'
 
 dayjs.extend(objectSupport)
-dayjs.extend(customParseFormat)
+dayjs.extend(duration)
 
 const calculateAge = (year, month, day) => {
   let now = dayjs();
@@ -18,7 +18,7 @@ const calculateAge = (year, month, day) => {
     months: now.subtract(month, "month").month(),
     days: now.subtract(day, "day").date()
   }
-  return age;
+  return dayjs.duration(age);
 }
 
 export default calculateAge;
