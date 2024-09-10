@@ -1,24 +1,15 @@
-import ResultField from "./ResultField";
+import PropTypes from "prop-types";
 
-const Results = () => {
+const Results = ({ children }) => {
   return (
     <section className="results">
-      <ResultField.Root>
-        <ResultField.Number />
-        <ResultField.Period value="years" />
-      </ResultField.Root>
-      
-      <ResultField.Root>
-        <ResultField.Number />
-        <ResultField.Period value="months" />
-      </ResultField.Root>
-
-      <ResultField.Root>
-        <ResultField.Number />
-        <ResultField.Period value="days" />
-      </ResultField.Root>
+      {children}
     </section>
   );
+}
+
+Results.propTypes = {
+  children: PropTypes.node
 }
 
 export default Results
